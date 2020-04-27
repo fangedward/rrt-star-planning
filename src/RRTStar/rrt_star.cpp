@@ -63,7 +63,7 @@ void RRT::setStateSpace(double x_start, double y_start, double x_end, double y_e
     // State space calculated as minimum bounding rectangle with buffer
     // origin is lower left corner, bounds is width, height
     origin.x() = min(start_pos.x(), end_pos.x()) - rrts_hp->lane_width;
-    origin.y() = min(start_pos.y(), end_pos.y()) - rrts_hp->lane_width;
+    origin.y() = min(start_pos.y(), end_pos.y()) - 1;
     bounds.x() = max(start_pos.x(), end_pos.x()) - origin.x() + rrts_hp->lane_width;
     bounds.y() = max(start_pos.y(), end_pos.y()) - origin.y() + rrts_hp->lane_width;
 }
